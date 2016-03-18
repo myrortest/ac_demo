@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AcDemo</title>
+    <%= csrf_meta_tags %>
+    <%= action_cable_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" style="color:#ffffff;">Chat Room</a>
+        </div>
+        <ul class="nav navbar-nav" style="float:right; color:white; padding:15px;">
+          <li><i class="fa fa-user"></i> <%= current_user.name if current_user %> </li>
+        </ul>
+      </div>
+    </nav>
+    <%= yield %>
+  </body>
+</html>

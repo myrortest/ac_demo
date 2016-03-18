@@ -1,0 +1,5 @@
+<% if @user.errors.present? %>
+  $("label").html("Please enter your name first");
+<% else %>
+  window.location.href = "<%= root_path %>";
+<% end %>

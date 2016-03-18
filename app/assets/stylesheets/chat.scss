@@ -1,0 +1,136 @@
+.container-fluid{
+  background-color: #6BC072;
+}
+
+.chat-room-show{
+  .chat-box{
+    width:330px;
+    margin-bottom:0px;
+    border:1px double #ccc;
+    margin:40px;
+    box-shadow:1px 2px 3px #ccc;
+    background-color:#ffffff;
+    h4{
+      color:gray;
+      margin-left:15px;
+    }
+    form{
+      all: initial;
+    }
+  }
+
+  #messages{
+    overflow-x: hidden;
+    overflow:auto; 
+    height:400px;
+    padding:10px;
+  }
+
+  .input-message{
+    font-family: "Ubuntu-Italic", "Lucida Sans", helvetica, sans;
+    font-size: 13px;
+    color: #666666;
+    width:100%;
+    padding:10px;
+    margin-bottom:-4px;
+    border:0px double #ccc;
+    border-top:1px double #ccc;
+  }
+
+  /* CSS talk bubble */
+  .talk-bubble {
+    margin: 20px 0px;
+    display: inline-block;
+    position: relative;
+    width: 250px;
+    height: auto;
+    background-color: lightyellow;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 10px;
+    background-color: #DBFFDE;
+    font-family: "Ubuntu-Italic", "Lucida Sans", helvetica, sans;
+    font-size: 13px;
+    color:#666666;
+    line-height: 15px;
+    box-shadow:1px 2px 3px #ccc;
+    p{
+      margin-bottom:5px;
+    }
+  }
+  .user-thumb{
+    border-left: 4px solid #ccc;
+  }
+  .tri-right.btm-left-in:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 18px;
+    right: auto;
+    top: auto;
+    bottom: -14px;
+    border: 8px solid;
+    border-color: #DBFFDE transparent transparent #DBFFDE;
+  }
+  .tri-right.btm-right-in:after{
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: auto;
+    right: 18px;
+    bottom: -14px;
+    border: 8px solid;
+    border-color: #DBFFDE #DBFFDE transparent transparent;
+  }
+  .pull-right{
+    text-align:right;
+  }
+  /* CSS talk bubble */
+}
+
+/* Chat Users List */
+
+.col-xs-3.user-list{
+  background-color:#ffffff;
+  height:630px;
+  margin-top:-20px;
+  box-shadow:1px 2px 3px #ccc;
+  border:1px double #ccc;
+  padding:0px;
+  .chat-room-user{
+    padding:10px;
+    height:50px;
+    color: theme-green;
+    width:100%;
+    i{
+      color:#6BC072;
+      font-size:20px;
+    }
+  }:hover{
+    background-color:#DBFFDE;
+    transition:500ms;
+    i{
+      color:#ffffff;
+    }    
+  }
+  .notification{
+    background-color:orange;
+    width:20px;
+    height:20px;
+    padding:3px;
+    float:right;
+    border-radius:50%;
+    font-size:12px;
+    font-weight:bold;
+    color:white;
+    text-align:center;
+  }
+  .user-chat-link{
+    display: block;
+    text-decoration:none;
+  }
+}
+

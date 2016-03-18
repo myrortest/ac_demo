@@ -1,0 +1,10 @@
+<div class="message">
+  <div id="usertext_<%= message.user_id %>" class="talk-bubble tri-right <%= (current_user.id == message.user_id) ? 'btm-right-in pull-right' : 'btm-left-in user-thumb'%> ">
+    <div class="talktext">
+      <span class=""><%= message.user_id %></span>
+      <span id="sender_id" class="hide"><%= message.user_id %></span>
+      <span id="receiver_id" class="hide"><%= message.receiver_id %></span>      
+      <p><%= message.content %></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+$("#start_chat").html("<%= j render(partial: 'start_chat', locals:{messages: @messages})%>");
+
+// removing notification count if any on right side user's list, on user's click.
+$('#noti_<%= @receiver.id %>').html("");
+$('#noti_<%= @receiver.id %>').addClass("hide");

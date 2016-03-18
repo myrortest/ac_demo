@@ -1,0 +1,14 @@
+<hgroup>
+  <h1>Start Free Chat</h1>
+</hgroup>
+<%= form_for @user, remote: true do |f|%>
+  <div class="group">
+    <%= f.text_field :name, data: {errorkey: "name"} %>
+    <span class="highlight"></span><span class="bar"></span>
+    <label>Name</label>
+  </div>
+  <%= f.submit "Save", class: "button buttonBlue" do %>
+    Subscribe
+    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+  <% end %>
+<% end %>
