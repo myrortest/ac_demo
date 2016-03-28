@@ -39,7 +39,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Action Cable endpoint configuration
-  config.action_cable.url = '/cable'
+  config.action_cable.url = "<%= ENV['WS_PATH'] %>/cable"
   config.action_cable.allowed_request_origins = [ '/' ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
