@@ -8,4 +8,4 @@
 #= require_tree ./channels
 #
   @App ||= {}
-  App.cable = ActionCable.createConsumer('wss://salty-plains-75190.herokuapp.com/')
+  App.cable = ActionCable.createConsumer('wss://122.180.33.10')
