@@ -42,8 +42,8 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://122.180.33.10:28080/cable'
   # config.action_cable.allowed_request_origins = [ 'https://salty-plains-75190.herokuapp.com/' ]
 
-  # config.action_cable.url = 'wss://example.com/cable'
-  # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
+  config.action_cable.url = 'wss://salty-plains-75190.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = [ 'https://salty-plains-75190.herokuapp.com', /http:\/\/salty-plains-75190.herokuapp.*/ ]
 
 
 
