@@ -40,7 +40,7 @@ Rails.application.configure do
 
   # Action Cable endpoint configuration
   config.action_cable.url = "<%= ENV['WS_PATH'] %>/cable"
-  config.action_cable.allowed_request_origins = [ '/' ]
+  config.action_cable.allowed_request_origins = [ "<%= ENV['WS_PATH'] %>/cable" ]
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
   # config.force_ssl = true
