@@ -1,5 +1,6 @@
 <div class="chat-box">
-  <h4><%= @receiver.name %></h4>
+  <h4 id="receiver_name"><%= @receiver.name %></h4>
+  <span id="msg_sender_id" class="hide"><%= @sender.id %></span>
   <div id="messages">
     <div id="user_<%= @receiver.id %>">
       <%= render messages %>

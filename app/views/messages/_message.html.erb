@@ -1,7 +1,9 @@
 <div class="message">
-  <div id="usertext_<%= message.user_id %>" class="talk-bubble tri-right <%= (current_user.id == message.user_id) ? 'btm-right-in pull-right' : 'btm-left-in user-thumb'%> ">
+  <div id="usertext_<%= message.user_id %>" class="talk-bubble tri-right <%= (current_user.id == message.user_id) ? 'btm-right-in pull-right' : 'btm-left-in user-thumb make_it_left'%> ">
     <div class="talktext">
-      <span class=""><%= message.user_id %></span>
+
+      <span class="bubble_user_icon <%= current_user.id == message.user_id ? 'hide' : '' %>"><%= @receiver.present? ? @receiver.name.first : "" %></span>
+
       <span id="sender_id" class="hide"><%= message.user_id %></span>
       <span id="receiver_id" class="hide"><%= message.receiver_id %></span>      
       <p><%= message.content %></p>
