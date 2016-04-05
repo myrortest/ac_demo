@@ -29,7 +29,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
     if $('#msg_sender_id').html() == sender_id
       data['message'] = data['message'].replace('"message"','"message pull-right"');
 
-    $('#user_'+receiver_id).append data['message'].replace('<span class="bubble_user_icon">','<span class="bubble_user_icon hide">')
+    $('#user_'+receiver_id).append data['message'].replace('<span class="bubble_user_icon">','<span class="bubble_user_icon hide">').replace('btm-left-in','btm-right-in')
 
     # Called when there's incoming data on the websocket for this channel
     scrollItNow()
@@ -39,7 +39,10 @@ App.room = App.cable.subscriptions.create "RoomChannel",
 
 $(document).on 'keypress', '[data-behavior~=room_speaker]', (event) ->
   if event.keyCode is 13 #return = send
-    App.room.speak(event.target.value, event.target.parentElement.children.sender.value, event.target.parentElement.children.receiver.value)
-    event.target.value = ''
-    event.preventDefault()
+    if event.target.value != "" && event.target.value != "\n"     # To checking if user is not sending blank chat.
+      App.room.speak(event.target.value, event.target.parentElement.children.sender.value, event.target.parentElement.children.receiver.value)
+      event.target.value = ''
+      event.preventDefault()
+    else
+      event.preventDefault()
 

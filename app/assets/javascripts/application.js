@@ -72,7 +72,7 @@ function a(message_user_id, message) {
   user_id = $('#user').val();
   if (message_user_id != user_id)
   {
-    message = message.replace(message.match("talk-bubble tri-right (.*) \">")[1], "btm-left-in user-thumb");
+    message = message.replace(message.match("talk-bubble tri-right (.*) \">")[1], "btm-left-in");
   }
   return message;
 }

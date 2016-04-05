@@ -3,7 +3,24 @@
   <span id="msg_sender_id" class="hide"><%= @sender.id %></span>
   <div id="messages">
     <div id="user_<%= @receiver.id %>">
-      <%= render messages %>
+      <% if @messages.present? %>
+        <div style="width:100%; text-align:center; padding:1px; color:gray;">
+          <hr/>
+          Started from: <%= @messages.first.created_at.strftime('%A, %d/%m/%Y') %>
+        </div>
+        <%= render partial: "messages/message", locals:{message: @messages.first} %>
+      <% end %>
+      <% @messages.each_cons(2) do |pre_message, message| %>
+        <% if pre_message.created_at.strftime('%d-%m-%Y') == message.created_at.strftime('%d-%m-%Y') %>
+          <%= render partial: "messages/message", locals:{message: message} %>
+        <% else %>
+          <div style="width:100%; text-align:center; padding:1px; color:gray;">
+            <hr/>
+            <%= message.created_at.strftime('%A, %d/%m/%Y') %>
+          </div>
+          <%= render partial: "messages/message", locals:{message: message} %>
+        <% end %>
+      <% end %>
     </div>
   </div>
   <form>
