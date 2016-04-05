@@ -1,10 +1,11 @@
-<div class="message">
-  <div id="usertext_<%= message.user_id %>" class="talk-bubble tri-right <%= (current_user.id == message.user_id) ? 'btm-right-in pull-right' : 'btm-left-in user-thumb'%> ">
+<div class="message" title="<%= message.created_at.in_time_zone.localtime.strftime(' %I : %M %p') %>">
+  <div id="usertext_<%= message.user_id %>" class="talk-bubble tri-right <%= (current_user.id == message.user_id) ? 'btm-right-in pull-right' : 'btm-left-in'%> ">
     <div class="talktext">
-      <span class=""><%= message.user_id %></span>
+      <span class="bubble_user_icon <%= current_user.id == message.user_id ? 'hide' : '' %>"><%= @receiver.present? ? @receiver.name.first : "" %></span>
       <span id="sender_id" class="hide"><%= message.user_id %></span>
-      <span id="receiver_id" class="hide"><%= message.receiver_id %></span>      
+      <span id="receiver_id" class="hide"><%= message.receiver_id %></span>
       <p><%= message.content %></p>
+      <span id="created_at" class="hide"><%= message.created_at %></span>
     </div>
   </div>
 </div>

@@ -59,8 +59,19 @@
       margin-bottom:5px;
     }
   }
-  .user-thumb{
-    border-left: 4px solid #ccc;
+  .bubble_user_icon{
+    float: left;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(174, 213, 174);
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 7px;
+    margin-left: -4px;
+    margin-right: 10px;
+    text-align:center;
   }
   .tri-right.btm-left-in:after{
     content: ' ';
@@ -87,6 +98,9 @@
   }
   .pull-right{
     text-align:right;
+  }
+  .pull-left{
+    text-align:left;
   }
   /* CSS talk bubble */
 }

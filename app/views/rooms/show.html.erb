@@ -7,7 +7,7 @@
   <% @users.each do |user|%>
     <div class="chat-room-user">
       <%= link_to start_chat_room_path(user.id), remote: true, class: "user-chat-link" do %>
-        <i class="fa fa-user"></i> &nbsp;&nbsp;&nbsp; <%= user.name %>   <div id="noti_<%= user.id %>" class="notification hide"> </div> 
+        <i class="fa fa-user"></i> &nbsp;&nbsp;&nbsp; <%= user.name %>   <div id="noti_<%= user.id %>" class="notification hide"></div>
       <% end %>
     </div>
   <% end %>
