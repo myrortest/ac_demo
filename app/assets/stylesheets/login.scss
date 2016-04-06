@@ -4,11 +4,23 @@ body {
   font-family: Helvetica;
   background: #eee;
   -webkit-font-smoothing: antialiased;
+  font-family: 'PT Sans', sans-serif;
 }
 
 hgroup { 
   text-align:center;
   margin-top: 4em;
+  color:white;
+  h1{
+    font-family: 'Satisfy', cursive;
+  }
+  ul{
+    line-height:30px;
+    list-style: none;
+  }
+  font-size:12px;
+  text-align:right;
+  padding-right:50px;
 }
 
 h1, h3 { font-weight: 300; }
@@ -17,18 +29,27 @@ h1 { color: #636363; }
 
 h3 { color: #9CDBA1; }
 
+.login_form{
+  margin-top:70px;
+}
+
 form {
-  width: 380px;
+  width: 350px;
   margin: 4em auto;
   padding: 3em 2em 2em 2em;
   background: #fafafa;
   border: 1px solid #ebebeb;
   box-shadow: rgba(0,0,0,0.14902) 0px 1px 1px 0px,rgba(0,0,0,0.09804) 0px 1px 2px 0px;
+  box-shadow: 1px 2px 3px #000000;
 }
 
 .group { 
   position: relative; 
   margin-bottom: 45px; 
+  label{
+    font-weight:normal;
+    color:#5A5959;
+  }
 }
 
 input {
@@ -85,7 +106,7 @@ input:focus ~ label, input.used ~ label {
   width: 0;
   bottom: 1px; 
   position: absolute;
-  background: #6BC072; 
+  background: #65A02C;
   transition: all 0.2s ease;
 }
 
@@ -154,7 +175,7 @@ input:focus ~ .highlight {
 /* Button modifiers */
 
 .buttonBlue {
-  background: #6BC072;
+  background: #65A02C;
   text-shadow: 1px 1px 0 rgba(39, 110, 204, .5);
 }
 
@@ -216,13 +237,13 @@ footer p {
 }
 
 footer a {
-  color: #6BC072;
+  color: #65A02C;
   text-decoration: none;
   transition: all .2s ease;
 }
 
 footer a:hover {
-  color: #6BC072;
+  color: #65A02C;
   text-decoration: underline;
 }
 

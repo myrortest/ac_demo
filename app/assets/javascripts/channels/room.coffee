@@ -26,10 +26,7 @@ App.room = App.cable.subscriptions.create "RoomChannel",
       else
         $('#noti_'+sender_id).html(parseInt($('#noti_'+sender_id).html()) + 1)
 
-    if $('#msg_sender_id').html() == sender_id
-      data['message'] = data['message'].replace('"message"','"message pull-right"');
-
-    $('#user_'+receiver_id).append data['message'].replace('<span class="bubble_user_icon">','<span class="bubble_user_icon hide">').replace('btm-left-in','btm-right-in')
+    $('#user_'+receiver_id).append data['message'].replace('<span class="bubble_user_icon">','<span class="bubble_user_icon hide">').replace('btm-left-in','btm-right-in pull-right')
 
     # Called when there's incoming data on the websocket for this channel
     scrollItNow()
