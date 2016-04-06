@@ -19,6 +19,9 @@
 
 $(document).ready(function(){
 
+  // to remove scroll because of right side user's list.
+  $('.user-list').css('height',$(window).height()- 55);
+
   $('input').blur(function() {
     var $this = $(this);
     if ($this.val())

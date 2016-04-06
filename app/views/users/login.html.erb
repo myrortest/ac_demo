@@ -1,14 +1,37 @@
-<hgroup>
-  <h1>Start Free Chat</h1>
-</hgroup>
-<%= form_for @user, remote: true do |f|%>
-  <div class="group">
-    <%= f.text_field :name, data: {errorkey: "name"} %>
-    <span class="highlight"></span><span class="bar"></span>
-    <label>Name</label>
+<div class="login_form">
+  <div class="col-xs-6">
+    <hgroup>
+      <img src="assets/logo.png" width="150" alt="logo">
+      <h1>Start Free Chat</h1>
+      <hr/>
+      <ul>
+        <li>Login is signup, if you previously logged in via same email then you can avoid Screen Name. &nbsp;&nbsp;&nbsp;&nbsp;<i class='fa fa-star'></i> </li>
+        <li>No password reset feature. &nbsp;&nbsp;&nbsp;&nbsp;<i class='fa fa-star'></i> </li>
+        <li>Lorem ipsum dolor sit amet, elit mi nam, sed ultrices eu urna a. Class nulla. &nbsp;&nbsp;&nbsp;&nbsp;<i class='fa fa-star'></i> </li>
+      </ul>
+    </hgroup>
   </div>
-  <%= f.submit "Save", class: "button buttonBlue" do %>
-    Subscribe
-    <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
-  <% end %>
-<% end %>
+  <div class="col-xs-6" style="border-left: 1px solid #cccccc;">
+    <%= form_for @user, remote: true do |f|%>
+      <div class="group">
+        <%= f.text_field :name, data: {errorkey: "name"} %>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Screen Name</label>
+      </div>
+      <div class="group">
+        <%= f.text_field :name, data: {errorkey: "name"} %>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Email</label>
+      </div>
+      <div class="group">
+        <%= f.password_field :name, data: {errorkey: "name"} %>
+        <span class="highlight"></span><span class="bar"></span>
+        <label>Password</label>
+      </div>
+      <%= f.submit "Login", class: "button buttonBlue" do %>
+        Subscribe
+        <div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

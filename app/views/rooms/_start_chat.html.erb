@@ -1,5 +1,5 @@
 <div class="chat-box">
-  <h4 id="receiver_name"><%= @receiver.name %></h4>
+  <div class="chat_user_title" id="receiver_name"><%= @receiver.name %></div>
   <span id="msg_sender_id" class="hide"><%= @sender.id %></span>
   <div id="messages">
     <div id="user_<%= @receiver.id %>">
@@ -24,7 +24,7 @@
     </div>
   </div>
   <form>
-    <textarea data-behavior="room_speaker" class="input-message" placeholder="Some text" cols="40" rows="3" name="textarea" id="textarea"></textarea>
+    <textarea data-behavior="room_speaker" class="input-message" placeholder="Some text" cols="40" rows="2" name="textarea" id="textarea"></textarea>
     <%= hidden_field_tag "sender", @sender.id, id:"user" %>
     <%= hidden_field_tag "receiver", @receiver.id, id:"receiver" %>
   </form>

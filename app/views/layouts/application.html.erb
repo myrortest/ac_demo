@@ -7,17 +7,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
   </head>
 
-  <body>
-    <nav class="navbar navbar-default">
+  <body style="background: url('assets/background.jpg') no-repeat center center; background-size:(100%); filter:alpha(opacity=50);">
+    <nav class="navbar" style="border-bottom: 1px solid #f8f8f8;">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#" style="color:#ffffff;">Chat Room</a>
+          <ul class="nav navbar-nav" style="float:right; color:white; padding:15px;">
+            <li><i class="fa fa-user"></i> <%= current_user.name if current_user %> </li>
+          </ul>
         </div>
-        <ul class="nav navbar-nav" style="float:right; color:white; padding:15px;">
-          <li><i class="fa fa-user"></i> <%= current_user.name if current_user %> </li>
-        </ul>
       </div>
     </nav>
     <%= yield %>
